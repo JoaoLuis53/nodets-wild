@@ -1,0 +1,69 @@
+{{>partials/header}}
+
+
+</ul>
+<section>
+    <div class="container ">
+        <div class="leftside"></div>
+        <div class="centerside">
+         Opa {{name}} {{lastName}}, tudo bem?
+{{#showOld}}
+    Como vai a vida?
+{{/showOld}}
+{{^showOld}}
+    Beleza?
+{{/showOld}}
+
+<hr/>
+<fieldset>
+    <legend>  Novo Usuário  </legend>
+    <form method="POST" action="/novousuario"><br>
+        <input type="text" name="name" placeholder="Digite um Nome"/><br><br>
+        <input type="text" name="age" placeholder="Digite uma Idade"/><br><br>
+        <input type="submit" value="Inserir Usuário"/><br><br>
+    </form>
+</fieldset>
+<h2>Usuários do Banco</h2>
+<ul class="ul">
+    {{#users}}
+    <li>
+       {{ name }} (Primeirar letra: {{firstLetterOfName}})
+       - Idade: {{age}}
+       - <a href="/usuario/{{id}}/mais">[Aumentar] </a>
+       - <a href="/usuario/{{id}}/menos"> [Diminuir] </a>
+       - <a href="/usuario/{{id}}/excluir">[Excluir]</a>
+    </li><br>
+    {{/users}}
+</ul>
+
+<hr/>
+<h2>Produtos</h2>
+<ul class="ul">
+    {{#products}}
+        {{>partials/productItem}}
+    {{/products}}
+</ul>
+
+<hr/>
+<h2>Produtos a partir de R$ 12</h2>
+<ul class="ul">
+    {{#expensives}}
+        {{>partials/productItem}}
+    {{/expensives}}
+</ul>
+
+<hr/>
+
+<ul class="ul">
+    {{#frasesDoDia}}
+        <li>{{.}}</li>
+    {{/frasesDoDia}}
+    {{^frasesDoDia}}
+        Não há frases motivacionais hoje.
+    {{/frasesDoDia}}
+        </div>
+        <div class="rightside"></div>
+    </div>
+</section>
+
+{{>partials/footer}}

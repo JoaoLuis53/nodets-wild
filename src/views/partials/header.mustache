@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/estilo.css" />
+    <title>:::Wildscheine Trail Club:::</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="cadastros">
+               <div class="cadastro">
+                   
+                    <form action="POST" action="/cadastro">
+                        <h1>Cadastro Wildscheine</h1>
+                         Nome:
+                         <input type="text" name="nome">
+                         Email:
+                         <input type="email" name="email">
+                         Apelido:
+                         <input type="text" name="apelido">
+                         Foto:
+                         <input type="file"  name="foto">
+                         Moto:
+                         <input type="text" name="moto">
+                         Foto da Moto:
+                         <input type="file" name="f_moto">
+                         Senha:
+                         <input type="password" name="senha">
+                         <input type="submit" value="Cadastrar"/>
+                    </form>
+                </div>
+            </div>
+               
+                  <nav> 
+                      <div class="menu">
+                          
+                            <div class="logo-left-icon">
+                               <h1>Wildscheine </h1> 
+                               <img src="assets/image/moto-logo.png">
+                               <h1>Trail Club</h1>
+                            </div>
+                          <ul>
+                            <li onclick="home()" class="active">Pagina Inicial</li>
+                            <li onclick="whoWheAre()">Quem Somos</li> 
+                            <li>Socios</li> 
+                            <li>Fotos</li>
+                            <li>Recados</li>
+                            <li>Contato</li>
+                         </ul>
+                            <div class="menu-opener" onclick="menuToglle()">
+                                <div class="menu-list"></div>
+                                <div class="menu-list"></div>
+                                <div class="menu-list"></div>
+                           </div>
+                       </div>
+                       
+                    
+                       <div id="menu" class="menu-dinamico">
+                        <ul>
+                        <li onclick="homeCel()">Pagina Inicial</li>
+                        <li onclick="whoWheAreCel()">Quem Somos</li> 
+                        <li>Socios</li> 
+                        <li>Fotos</li>
+                        <li>Recados</li>
+                        <li>Contato</li>
+                     </ul>
+                       </div> 
+                   </nav> 
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-left">
+                       <h1>Wildscheine </h1> 
+                       <img src="assets/image/moto-logo.png">
+                       <h1>Trail Club</h1>
+                    </div>
+                    <div class="logo-center">
+                        <div class="slider--controls">
+                            <div class="slider--control" onclick="goPrev()">Voltar</div>
+                            <div class="slider--control" onclick="goNext()">Próxima</div>
+                        </div>
+                        <div class="shadow">
+                            <div class="sliders" >
+                                <div class="slider--item" style="background-image: url(assets/image/1.jpg);"></div>
+                                <div class="slider--item" style="background-image: url(assets/image/3.jpg);"></div>
+                                <div class="slider--item" style="background-image: url(assets/image/4.jpg);"></div>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="logo-right">
+                        <div class="socio">
+                            <div class="socio-img"><img src="assets/image/1.jpg" /></div>
+                            <div class="socio-apelido">pedrinho</div>
+                        </div>
+                       <div class="formulario input">
+                           <form method="post" >
+                               <input type="text" name="Usuario" data-rules="required" placeholder="Usuário"><br>
+                               <input type="password" name="senha" placeholder="Digite Sua senha"><br>
+                               <button class="button" onclick="socio()">Entrar</button>
+                            </form>
+                            <a href="">Esqueci minha Senha</a>
+                            <button class="cad" onclick="cadastro()">Cadastrar-se</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="data"></div>
+         
+    
+        </header>
